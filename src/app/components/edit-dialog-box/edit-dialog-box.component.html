@@ -1,0 +1,20 @@
+<form  >
+<p class="edit-heading">Edit Task</p>
+<textarea name="task" id="task" cols="20" rows="1" placeholder="Task"  [(ngModel)]="data.task" name="task" ></textarea>
+<div class="picker-container">
+<input type="text" placeholder="Date (MM/DD/YYYY)" [(ngModel)]="data.date_to_be_accomplished"  name="date_to_be_accomplished"  matInput [matDatepicker]="picker" class="datepickerIn" >
+<mat-datepicker-toggle [for]="picker" class="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker ></mat-datepicker>
+</div>
+
+
+
+<input type="text" placeholder="Start Task At" [(ngModel)]="data.time_to_start" name="time_to_start"  [ngxTimepicker]="timePicker" >
+<ngx-material-timepicker #timePicker></ngx-material-timepicker>
+
+<input type="text" placeholder="Finish Task At"  [(ngModel)]="data.time_to_be_accomplished" name="time_to_be_accomplished"  [ngxTimepicker]="timePicker2" >
+<ngx-material-timepicker #timePicker2></ngx-material-timepicker>
+<button type="submit" [mat-dialog-close]="data">Save Task</button>
+<button type="submit" class="cancel-btn" (click)="onCancel()">Cancel</button>
+
+</form>

@@ -1,0 +1,25 @@
+<nav>
+<div class="res-main">
+<a href="/" class="logo"><img src="/assets/images/planit logo.png" alt="Plan It Logo"><p class="main">Plan It: Personal To-Do List</p>   </a> 
+<div class="burger" onclick="toggle(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+   
+</div>
+
+
+</div>    
+<div class="nav-links">
+    <a routerLink="/" routerLinkActive="active" *ngIf="!authService.loggedIn" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a routerLink="/login" routerLinkActive="active"  *ngIf="!authService.loggedIn" [routerLinkActiveOptions]="{exact: true}">Login</a>
+    <a routerLink="/sign-up"  routerLinkActive="active" *ngIf="!authService.loggedIn" [routerLinkActiveOptions]="{exact: true}">Sign Up</a>
+    <a routerLink="/dashboard"  routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" *ngIf="authService.loggedIn">My dashboard</a>
+    <a routerLink="/" (click)="logout()" routerLinkActive="active"  [routerLinkActiveOptions]="{exact: true}" *ngIf="authService.loggedIn">Log out</a>
+
+</div>
+</nav>
+
+
+
+

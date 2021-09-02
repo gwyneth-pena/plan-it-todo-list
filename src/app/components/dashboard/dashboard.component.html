@@ -1,0 +1,59 @@
+
+<div class="dashboard-container">
+<form [formGroup]="taskForm" (ngSubmit)="submitTask()" >
+<textarea name="task" id="task" cols="20" rows="1" placeholder="Task" formControlName="task"></textarea>
+<div class="picker-container">
+<input type="text" placeholder="Date (MM/DD/YYYY)" formControlName='date_to_be_accomplished' matInput [matDatepicker]="picker" >
+<mat-datepicker-toggle [for]="picker" class="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>
+</div>
+<input type="text" placeholder="Start Task At" formControlName="time_to_start"  [ngxTimepicker]="timePicker" >
+<ngx-material-timepicker #timePicker></ngx-material-timepicker>
+
+<input type="text" placeholder="Finish Task At" formControlName="time_to_be_accomplished"  [ngxTimepicker]="timePicker2" >
+<ngx-material-timepicker #timePicker2></ngx-material-timepicker>
+<button type="submit" [disabled]="taskForm.invalid">Add Task</button>
+
+</form>
+
+
+
+
+
+<mat-accordion>
+   <mat-expansion-panel>
+   <mat-expansion-panel-header>
+       <mat-panel-title>
+           Add New Task
+       </mat-panel-title>
+    </mat-expansion-panel-header>
+      <ng-template matExpansionPanelContent>
+       <form [formGroup]="taskForm" (ngSubmit)="submitTask()" >
+        <textarea name="task" id="task" cols="20" rows="1" placeholder="Task" formControlName="task"></textarea>
+        <div class="picker-container">
+        <input type="text" placeholder="Date (MM/DD/YYYY)" formControlName='date_to_be_accomplished' matInput [matDatepicker]="picker2" >
+        <mat-datepicker-toggle [for]="picker2" class="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+        </div>
+        <input type="text" placeholder="Start Task At" formControlName="time_to_start"  [ngxTimepicker]="timePicker3" >
+        <ngx-material-timepicker #timePicker3></ngx-material-timepicker>
+        
+        <input type="text" placeholder="Finish Task At" formControlName="time_to_be_accomplished"  [ngxTimepicker]="timePicker4" >
+        <ngx-material-timepicker #timePicker4></ngx-material-timepicker>
+        <button type="submit" [disabled]="taskForm.invalid">Add Task</button>
+        
+        </form>
+        
+    </ng-template>
+
+
+   </mat-expansion-panel>
+</mat-accordion>
+
+<hr>    
+<p class="welcome-user" *ngIf="morning">Good morning, {{authService.currentUser}} !</p> 
+<p class="welcome-user" *ngIf="afternoon">Good afternoon, {{authService.currentUser}} !</p> 
+<p class="welcome-user" *ngIf="evening">Good evening, {{authService.currentUser}} !</p> 
+<app-task-list  [upcomingTasks]="upcomingTasks" [todaysTasks]= "todaysTasks" (deleteOrUpdateToGetTaskEvent)="deleteIsClickedOrTaskUpdated($event)"  [missedTasks]="missedTasks" [accomplished]="accomplished" (update)="updateTask($event)" >
+</app-task-list>
+</div>

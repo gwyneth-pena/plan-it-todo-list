@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
+
+
+footer{
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-family: 'Mulish',sans-serif;
+   background: rgb(94, 93, 93);
+   color: white;
+   position: relative;
+}
+
+.footer-wrapper{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    margin: 30px 0 ;
+}
+
+
+
+.quick-links,.contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.footer-heading{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+p{
+    margin: 7px 0;
+}
+
+a{
+     margin: 7px 0;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+   
+
+}
+
+.move-up{
+    position: fixed;
+    right: 5px;
+    bottom: 5px;
+    color: #66B386;
+    cursor: pointer;
+}
+
+.social-media-links,.quick-links,.contact-info{
+    margin: 30px 0;
+ 
+}
+
+
+.social-media-links a{
+    margin: 0 20px;
+}
+a:hover{
+    color:#66B386;
+}
+
+.copyright{
+    font-size: 16px;
+}
+
+@media screen and (max-width:350px) {
+    
+footer{
+    padding: 0px;
+  
+ }
+}

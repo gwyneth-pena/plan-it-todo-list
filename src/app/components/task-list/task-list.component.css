@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
+
+
+
+.task-list-container{
+    padding: 30px 40px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p{
+    font-family: sans-serif;
+}
+
+.list-heading{
+
+   font-family: 'Mulish',sans-serif;
+   font-size: 18px;
+   text-decoration: underline;
+}
+
+app-task{
+    width: 40%;
+    
+}
+
+
+
+
+@media screen and (max-width:1072px){
+    app-task{
+        width: 60%;
+    }
+}
+
+
+
+@media screen and (max-width:872px){
+    app-task{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:572px){
+    .task-list-container{
+        padding: 30px 20px;
+    }
+
+    app-task{
+        width: 95%;
+    }
+    .list-heading{
+        font-size: 18px;
+    }
+}

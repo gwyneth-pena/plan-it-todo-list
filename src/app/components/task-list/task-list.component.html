@@ -1,0 +1,19 @@
+
+    
+ <div class="task-list-container">
+   <p class="list-heading" >Today's Tasks</p>
+   <p style="font-weight: bold;" *ngIf = "todaysTasks?.length>0">You accomplished: {{accomplished?.length}} out of {{todaysTasks?.length}} <span *ngIf="todaysTasks?.length===1">task</span><span *ngIf="todaysTasks?.length>1">tasks</span></p>
+   <span *ngIf="accomplished?.length===todaysTasks?.length&&todaysTasks?.length>0">Nice Job! You're now done with your all tasks.</span>
+   <span *ngIf="accomplished?.length!==todaysTasks?.length&&todaysTasks?.length>0">Keep going. You can accomplish all your tasks today.</span>
+   <p *ngIf = "todaysTasks?.length===0||todaysTasks==undefined">You have no tasks for today.</p>
+   <app-task  @appearUp  *ngFor="let task of todaysTasks;trackBy:trackById"  [task]="task" (deleteClickedOrTaskUpdated)="deleteIsClickedOrTaskUpdated($event)" (emittedUpdate)="takeUpdateAndSend($event)"></app-task>
+   <p class="list-heading" style="margin-top: 50px;" >Upcoming Tasks</p>
+   <p *ngIf = "upcomingTasks?.length===0 || todaysTasks==undefined">You have no upcoming tasks.</p>
+   <app-task @appearUp *ngFor="let task of upcomingTasks;trackBy:trackById" [upcoming]="true"  [task]="task" (deleteClickedOrTaskUpdated)="deleteIsClickedOrTaskUpdated($event)" (emittedUpdate)="takeUpdateAndSend($event)"></app-task>
+   <p class="list-heading" style="margin-top: 50px;" >Unfinished Tasks</p>
+   <p *ngIf = "missedTasks?.length>0">Hey, you're still not done with these tasks.</p>
+   <p *ngIf = "missedTasks?.length===0 || missedTasks==undefined">You have no unfinished tasks.</p>
+   <app-task @appearUp *ngFor="let task of missedTasks;trackBy:trackById" [missed]="true"  [task]="task" (deleteClickedOrTaskUpdated)="deleteIsClickedOrTaskUpdated($event)" (emittedUpdate)="takeUpdateAndSend($event)"></app-task>
+</div>
+
+

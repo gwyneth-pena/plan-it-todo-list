@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "plan-it-personal-to-do-list": {
+      "hosting": {
+        "myTodoApp": [
+          "plan-it-personal-to-do-list"
+        ]
+      }
+    }
+  }
+}

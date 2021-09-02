@@ -1,0 +1,25 @@
+<div class="task-container" >
+  <div class="task-top">
+   <div>
+     <div class="check-box" (click)="checkIfComplete(task.task_id)" [style.display]="missed||upcoming ? 'none' :'block' ">
+           
+           <div class="box" matTooltip="Click to indicate that the task is already finished." ></div>
+           <i class="fa fa-check fa-2x check"  *ngIf="task.completed===1" matTooltip="Task Completed" ></i>
+     </div>
+      <p class="task">{{task.task}}</p>
+   </div>
+      <p class="task-date">{{task.date_to_be_accomplished | date:'fullDate'}}</p>
+   </div>   
+<hr>
+   <div class="task-time-w-controls">
+      <div class="controls">  
+         <i  (click)="deleteTask(task.task_id)" class="fa fa-trash fa-lg" matTooltip="Delete"></i>
+         <i class="fa fa-edit fa-lg" matTooltip="Edit" (click)="openDialog(task)"></i>
+      </div>
+      <p> Start task at: <span>{{task.time_to_start| timePipe }}</span></p>
+      <p> Finish task at: <span>{{task.time_to_be_accomplished | timePipe }}</span></p>
+      
+   </div>
+
+
+</div>

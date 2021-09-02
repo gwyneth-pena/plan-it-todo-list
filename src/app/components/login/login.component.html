@@ -1,0 +1,16 @@
+<div class="login-container">
+<form @fall [formGroup]="loginForm" (ngSubmit)="login()">
+    <p class="form-heading">Login</p>
+    <input type="email" required placeholder="Enter email here" formControlName="email" email>
+    <input type="password" required placeholder="Enter password here" formControlName="password" >
+    <button type="submit" [disabled]="loginForm.invalid">Login</button>
+    <p class="already-signed">Don't have an account?<a routerLink="/sign-up"> Go to Sign Up</a></p>
+
+</form>   
+<div class="errors">
+    <p *ngIf="loginForm.controls.email.touched&&loginForm.controls.email.errors?.required">Email is required.</p>
+    <p *ngIf="loginForm.controls.password.touched&&loginForm.controls.password.errors?.required">Password is required.</p>
+    <p *ngIf="hasError">Please check your input. Invalid email or password.</p>
+</div>   
+
+</div>

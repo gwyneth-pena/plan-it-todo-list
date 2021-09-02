@@ -1,0 +1,29 @@
+<div class="sign-up-container">
+ 
+<form @fall [formGroup]="signUpForm" (ngSubmit)="signUp()">
+ <p class="form-heading">Sign Up</p>
+
+ <input type="text" placeholder="First Name" required formControlName="first_name">
+ <input type="text" placeholder="Last Name"  required formControlName="last_name">
+ <input type="email" placeholder="Email" required email formControlName="email">
+ <input type="password" placeholder="Password (atleast 7 characters)" required formControlName="password">
+ <input type="password" placeholder="Confirm Password  (atleast 7 characters)" required formControlName="confirm_password">
+ <button type="submit" [disabled]="signUpForm.invalid">Sign Up</button>
+ <p class="already-signed">Already signed up?<a routerLink="/login"> Go to Login</a></p>
+
+ 
+
+</form>
+
+<div class="errors">
+    <p *ngIf="ifHasExistingEmailError">Email is already registered. Try another one.</p>
+    <p *ngIf="signUpForm.controls.first_name.touched&&signUpForm.controls.first_name.errors?.required">First name is required.</p>
+    <p *ngIf="signUpForm.controls.last_name.touched&&signUpForm.controls.last_name.errors?.required">Last name is required.</p>
+    <p *ngIf="signUpForm.controls.password.touched&&signUpForm.controls.password.errors?.required">Password is required.</p>
+    <p *ngIf="signUpForm.controls.password.touched&&signUpForm.controls.password.errors?.minlength">Password should be atleast 7 characters.</p>
+    <p *ngIf="signUpForm.controls.confirm_password.touched&&signUpForm.controls.confirm_password.errors?.minlength">Password confirmation field should have atleast 7 characters.</p>
+    <p *ngIf="signUpForm.controls.confirm_password.touched&&signUpForm.controls.confirm_password.errors?.required">You need to confirm your password.</p>
+   <p *ngIf="signUpForm.controls.email.touched&&signUpForm.controls.email.errors?.required">Email is required.</p>
+   <p *ngIf= "!signUpForm.controls.confirm_password.errors?.required&&!signUpForm.controls.password.errors?.required&&signUpForm.errors?.mismatch&&!signUpForm.controls.confirm_password.errors?.minlength&&!signUpForm.controls.password.errors?.minlength">Passwords should match.</p>
+</div>
+</div>

@@ -1,0 +1,52 @@
+<div class="landing-page-container">
+   <div class="landing-page-box">
+    <div>
+    <h1 @fall >Plan Your Tasks Ahead</h1>
+    <a href="sign-up"><button type="button">Get Started</button></a>
+    </div>
+    <img src="assets/images/online organizer.svg" alt="Online Organizer" @fade>
+    </div> 
+    <div class="stats">
+         <div>
+           <p class="stats-heading" [@triggeredFall]="statScroll ? 'scrolled' : 'notScrolled'  " >Google Play</p>
+           <hr>
+           <p>4.7 stars, 187K+ reviews</p>
+         </div>    
+         <div>
+            <p class="stats-heading" [@triggeredFall]="statScroll ? 'scrolled' : 'notScrolled'  " >App Store</p>
+            <hr>
+            <p>4.8 stars, 30K+ reviews</p>
+          </div>    
+          <div>
+            <p class="stats-heading" [@triggeredFall]="statScroll ? 'scrolled' : 'notScrolled'  " >The Verge</p>
+            <hr>
+            <p>4.5 stars, 40K+ reviews</p>
+          </div> 
+    </div>
+    <div class="normal-align">
+       <div>
+        <h3 [@slide]="statScroll1? '*' : 'hide'">Increase your productivity</h3>
+        <p>We help you set specific and time-bounded tasks to increase your productivity.</p>
+       </div>
+       <img src="assets/images/growth.svg" alt="Growth">
+    </div>
+    <div class="reverse-align">
+      <img src="assets/images/multitask.svg" alt="Multitask">  
+
+      <div>
+       <h3 [@slide]="statScroll2 ? '*' : 'hide' "> Organize your tasks</h3>
+       <p>We help you sort your tasks based on their respective time and date.</p>
+      </div>
+  
+   </div>
+   <div class="normal-align">
+      <div>
+       <h3 [@slide]="statScroll3 ? '*' : 'hide'">Free up your mental space</h3>
+       <p>We help you gain clarity and calmness by getting all your tasks out of your head.</p>
+      </div>
+      <img src="assets/images/clarity.svg" alt="Clarity">
+   </div>
+
+
+
+</div>

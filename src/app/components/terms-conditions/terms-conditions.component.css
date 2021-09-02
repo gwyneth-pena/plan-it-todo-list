@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
+
+
+.terms-amd-terms-container{
+    padding: 100px 60px;
+    font-family: 'Mulish',sans-serif;
+    word-wrap: break-word;
+
+}
+
+.terms-heading{
+    font-weight: bold;
+    
+}
+
+h1,h2{
+    text-align: center;
+    margin:50px 0;
+}
+
+
+@media screen and (max-width:772px){
+   .terms-amd-terms-container{ 
+    padding: 100px 40px;
+    width: 100%;
+   }
+}
