@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*,html,body{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poly&display=swap");
+
+*,
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+}

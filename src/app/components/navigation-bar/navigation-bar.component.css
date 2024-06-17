@@ -1,195 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poly&display=swap');
-
-nav{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 8px 40px 8px 20px;
-    box-shadow: 1px 2px 5px rgba(0,0,0,0.4);
-    position: fixed;
-    background-color: white;
-    height: 10vh;
-    z-index: 5;
-    margin-bottom: 100px;
+nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 40px 8px 20px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  background-color: white;
+  height: 10vh;
+  z-index: 5;
+  margin-bottom: 100px;
 }
-nav >.res-main>a{
-    text-decoration: none;
-    color:#66B386;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Poly',sans-serif;
+nav > .res-main > a {
+  text-decoration: none;
+  color: #66b386;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: "Poly", sans-serif;
 }
-.logo{
-    display: flex;
-    align-items: center;
-    margin-left: 40px;
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
 }
-nav>.res-main>a>img{
-    width: 50px;
+nav > .res-main > a > img {
+  width: 50px;
 }
-.nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 25%;
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
 }
-.nav-links > a{
-   color: rgb(164, 168, 165);
-    width: 40%;
-    font-family: 'Mulish',sans-serif;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bolder;
-   
+.nav-links > a {
+  color: rgb(164, 168, 165);
+  width: 40%;
+  font-family: "Mulish", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bolder;
 }
 
-.active, .nav-links>a:hover{
-    font-size: 17px !important;
-    color: #66B386 !important;
-    text-decoration: underline !important;
+.active,
+.nav-links > a:hover {
+  font-size: 17px !important;
+  color: #66b386 !important;
+  text-decoration: underline !important;
 }
-
 
 .burger {
-    
-    cursor: pointer;
+  cursor: pointer;
+  display: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #66b386;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.show {
+  display: flex !important;
+  height: 30vh !important;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+@media screen and (min-width: 1920px) {
+  .nav-links > a {
+    font-size: 27px;
+  }
+  .active,
+  .nav-links > a:hover {
+    font-size: 28px !important;
+  }
+  nav > .res-main > a {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-links {
+    width: 40%;
+  }
+  nav {
+    height: 8vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav > .res-main > a {
+    font-size: 20px;
+  }
+
+  nav {
+    height: 6vh;
+  }
+
+  .nav-links > a {
+    font-size: 14px;
+  }
+  .active,
+  .nav-links > a:hover {
+    font-size: 15px !important;
+    color: #66b386 !important;
+    text-decoration: underline !important;
+  }
+}
+
+@media screen and (max-width: 683px) {
+  nav {
+    flex-direction: column;
+    z-index: 100;
+    width: 100%;
+    height: auto;
+    transition: ease-in-out all 0.7s;
+  }
+  .res-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .logo {
+    margin-left: 0px;
+  }
+  .nav-links {
     display: none;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
-  
-  .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #66B386;
-    margin: 6px 0;
-    transition: 0.4s;
+  .nav-links > a {
+    font-size: 18px;
+    margin: 10px 0;
   }
-  
- .show{
-     display: flex !important;
-     height: 30vh !important;
- }
-
-
-  .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+  .active,
+  .nav-links > a:hover {
+    font-size: 19px !important;
   }
-  
-  .change .bar2 {opacity: 0;}
-  
-  .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  .burger {
+    display: block;
   }
-
-
-
-  @media screen and (min-width:1920px){
-       .nav-links >a{
-           font-size: 27px;
-       }
-       .active, .nav-links>a:hover{
-        font-size: 28px !important;
-       }
-       nav >.res-main>a{
-           font-size: 27px ;
-       }
-  }
-
-
-
-  @media screen and (max-width:1200px){
-    .nav-links{
-        width: 40%;
-        
-    }
-    nav{
-        height: 8vh;
-    }
-  
-  }
-
- 
-
-@media screen and (max-width:800px){
-    nav >.res-main>a {
-        font-size: 20px;
-        
-    }
-     
-    nav{
-        height: 6vh;
-    }
-  
-    .nav-links > a{
-        font-size: 14px;
-    }
-    .active, .nav-links>a:hover{
-        font-size: 15px !important;
-        color: #66B386 !important;
-        text-decoration: underline !important;
-    }
-
 }
 
-
-@media screen and (max-width:683px){
-    nav{
-        flex-direction: column;
-        z-index: 100;
-        width: 100%;
-        height: auto;
-        transition: ease-in-out all 0.7s;
-    }
-    .res-main{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-       
-    } 
-    .logo{
-        margin-left: 0px;
-    }
-    .nav-links{
-        
-        display: none;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-      
-        
-    }
-    .nav-links > a{
-        font-size: 18px;
-        margin: 10px 0;
-    }
-    .active, .nav-links>a:hover{
-        font-size: 19px !important;
-    }
-    .burger{
-        display: block;
-    }
-  
-}
-
-@media screen and (max-width:434px){
-   nav{
+@media screen and (max-width: 434px) {
+  nav {
     padding: 10px 20px 10px 20px;
-   }
-    nav >.res-main>a {
-        font-size:  17px !important;
-       
-    }
+  }
+  nav > .res-main > a {
+    font-size: 17px !important;
+  }
 
-    nav >.res-main>a>img{
-        width: 30px;
-    }
-
- 
-    
+  nav > .res-main > a > img {
+    width: 30px;
+  }
 }
-

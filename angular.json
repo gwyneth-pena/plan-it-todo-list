@@ -110,9 +110,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -134,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "myTodoApp"
+  "defaultProject": "myTodoApp",
+  "cli": {
+    "analytics": "9807e922-c7c5-4e41-9010-6a30e66b2f8d"
+  }
 }

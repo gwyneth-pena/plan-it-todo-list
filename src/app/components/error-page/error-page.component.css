@@ -1,61 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-
-
-.error-page-container{
+.error-page-container {
   padding-top: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Mulish',sans-serif;
+  font-family: "Mulish", sans-serif;
 }
 
-.error-box{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 120px;
+.error-box {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 120px;
 }
 
-i{
-    color:#66B386;
-    margin-bottom: 50px;
+i {
+  color: #66b386;
+  margin-bottom: 50px;
 }
 
-.error-heading{
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 20px;
+.error-heading {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-p{
-    font-size: 20px;
+p {
+  font-size: 20px;
 }
 
 button {
-    background: #66B386;
-  
-  
-    border: none;
-    outline: none;
-    font-size: 18px;
-    padding: 10px 12px;
-    margin-top: 20px;
-    cursor: pointer;
+  background: #66b386;
+
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 10px 12px;
+  margin-top: 20px;
+  cursor: pointer;
 }
-button a{
-    text-decoration: none;
-    color: white;
+button a {
+  text-decoration: none;
+  color: white;
 }
-button:hover{
-   background:  #7bc59a;
+button:hover {
+  background: #7bc59a;
 }
 
-@media screen and (max-width:524px) {
-     
-  
-    .error-heading{
-        font-size: 30px;
-    }
+@media screen and (max-width: 524px) {
+  .error-heading {
+    font-size: 30px;
+  }
 }

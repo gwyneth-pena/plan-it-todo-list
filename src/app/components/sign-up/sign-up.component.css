@@ -1,121 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-
-.sign-up-container{
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 120px;
+.sign-up-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 120px;
 }
 
+form {
+  font-family: "Mulish", sans-serif;
+  margin-top: 120px;
+  width: 30%;
 
-
-form{
-    font-family: 'Mulish',sans-serif;
-    margin-top: 120px;
-    width: 30%;
-    
-    border-radius: 20px;
-    box-shadow: 1px 2px 7px #66B386;
-    height: 425px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-
-    
+  border-radius: 20px;
+  box-shadow: 1px 2px 7px #66b386;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
-.form-heading{
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    text-transform: uppercase;
+.form-heading {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-input{
-
-    border-radius: 10px;
-    font-size: 14px;
-    padding: 8px;
-    border: 1px solid #66B386;
-    margin: 7px 0;
+input {
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #66b386;
+  margin: 7px 0;
 }
 
-
-input:focus{
-    border: 3px solid #66B386;
-    outline:none;
+input:focus {
+  border: 3px solid #66b386;
+  outline: none;
 }
 
-button{
-    font-size: 15px;
-    padding: 8px;
-    background-color: #66B386;
-    margin: 7px 0;
-    color: white;
-    border: none;
-    cursor: pointer;
+button {
+  font-size: 15px;
+  padding: 8px;
+  background-color: #66b386;
+  margin: 7px 0;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
-button:hover{
-    background-color: #7bc59a;
-
-}
-
-.already-signed{
-    margin: 5px 0px;
-    font-size: 14px;
+button:hover {
+  background-color: #7bc59a;
 }
 
-.already-signed a{
-    color: #66B386;
-    font-weight: bold;
+.already-signed {
+  margin: 5px 0px;
+  font-size: 14px;
 }
 
-.errors{
-    font-family: sans-serif;
-    font-weight: lighter;
-    color: rgb(241, 101, 101);
-    font-style: italic;
-    font-size: 14px;
-    display: flex;
-
-}
-.errors p{
-    margin: 8px 15px;
-    
-}
-@media screen and (min-width:1680px){
-    .sign-up-container{
-        padding-top:200px;
-    }
-    form{
-        width: 450px;
-    }
+.already-signed a {
+  color: #66b386;
+  font-weight: bold;
 }
 
-@media screen and (max-width:986px){
-    form{
-        width: 60%;
-        margin-top: 180px;
-    }
+.errors {
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: rgb(241, 101, 101);
+  font-style: italic;
+  font-size: 14px;
+  display: flex;
+}
+.errors p {
+  margin: 8px 15px;
+}
+@media screen and (min-width: 1680px) {
+  .sign-up-container {
+    padding-top: 200px;
+  }
+  form {
+    width: 450px;
+  }
 }
 
+@media screen and (max-width: 986px) {
+  form {
+    width: 60%;
+    margin-top: 180px;
+  }
+}
 
-@media screen and (max-width:572px){
-   form{
-       width: 90%;
-       margin-top: 100px;
-       
-   }
-   .errors{
+@media screen and (max-width: 572px) {
+  form {
+    width: 90%;
+    margin-top: 100px;
+  }
+  .errors {
     margin-top: 10px;
     flex-direction: column;
-   justify-content: center;
- 
-}
-.errors p{
+    justify-content: center;
+  }
+  .errors p {
     text-align: center;
-   
-}
+  }
 }

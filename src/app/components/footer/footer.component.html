@@ -1,24 +1,31 @@
 <footer>
-   <i class="fa fa-arrow-circle-up fa-3x move-up" *ngIf="scrollPosition>5" (click)="goUp()" ></i>
-   <div class="footer-wrapper">
+  <i
+    class="fa fa-arrow-circle-up fa-3x move-up"
+    *ngIf="scrollPosition > 5"
+    (click)="goUp()"
+  ></i>
+  <div class="footer-wrapper">
     <div class="quick-links">
-        <p class="footer-heading" >Quick Links</p>
-        <a routerLink="/privacy-policy" (click)="goUp()">Privacy Policy</a>
-        <a routerLink="/terms-and-conditions" (click)="goUp()">Terms & Conditions</a>
-    </div>  
+      <p class="footer-heading">Quick Links</p>
+      <a routerLink="/privacy-policy" (click)="goUp()">Privacy Policy</a>
+      <a routerLink="/terms-and-conditions" (click)="goUp()"
+        >Terms & Conditions</a
+      >
+    </div>
     <div class="social-media-links">
-        <p class="footer-heading">Follow Us </p>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-       
+      <p class="footer-heading">Follow Us</p>
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
     </div>
-   
+
     <div class="contact-info">
-        <p class="footer-heading">Contact Info</p>
-         <p>Email: <a href="mailto:gwenpenadev@gmail.com">gwenpenadev@gmail.com</a></p>  
-         <p>Contact Number: 09667642440 </p>  
+      <p class="footer-heading">Contact Info</p>
+      <p>
+        Email: <a href="mailto:gwenpenadev@gmail.com">gwenpenadev@gmail.com</a>
+      </p>
+      <p>Contact Number: 09667642440</p>
     </div>
- </div> 
- <p class="copyright">All rights reserved.</p>
+  </div>
+  <p class="copyright">All rights reserved.</p>
 </footer>

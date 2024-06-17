@@ -7,22 +7,30 @@ import { LoginComponent } from './components/login/login.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { TermsConditionsComponent } from './components/terms-conditions/terms-conditions.component';
-import { AuthGuardService as AuthGuard} from './services/auth-guard.service';
+import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 import { UnAuthGuardService as UnAuthGuard } from './services/un-auth-guard.service';
 
 const routes: Routes = [
- {path:'',pathMatch:'full', component:LandingPageComponent ,canActivate:[UnAuthGuard]},
- {path:'login', component:LoginComponent,canActivate:[UnAuthGuard]},
- {path:'sign-up',component:SignUpComponent,canActivate:[UnAuthGuard]},
- {path:'dashboard',component:DashboardComponent,canActivate:[AuthGuard]},
- {path:'privacy-policy',component:PrivacyPolicyComponent},
- {path:'terms-and-conditions',component:TermsConditionsComponent},
- {path:'**',component:ErrorPageComponent,canActivate:[UnAuthGuard]}
- 
+  {
+    path: '',
+    pathMatch: 'full',
+    component: LandingPageComponent,
+    canActivate: [UnAuthGuard],
+  },
+  { path: 'login', component: LoginComponent, canActivate: [UnAuthGuard] },
+  { path: 'sign-up', component: SignUpComponent, canActivate: [UnAuthGuard] },
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
+  { path: 'terms-and-conditions', component: TermsConditionsComponent },
+  { path: '**', component: ErrorPageComponent, canActivate: [UnAuthGuard] },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

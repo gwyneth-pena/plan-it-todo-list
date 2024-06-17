@@ -1,121 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-
-
-.task-container{
-    width: 100%;
-    font-family: 'Mulish',sans-serif;
-    padding: 20px;
-    box-shadow: 1px 2px 5px rgba(0,0,0,0.4);
-    margin-top: 15px;
+.task-container {
+  width: 100%;
+  font-family: "Mulish", sans-serif;
+  padding: 20px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
 }
-.task-top{
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    border-radius: 3px;
-    align-items: center;
-    
+.task-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  border-radius: 3px;
+  align-items: center;
 }
 
-.task-top >div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-
+.task-top > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.check-box{
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-    margin-bottom: 10px;
-    position: relative;
+.check-box {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  margin-bottom: 10px;
+  position: relative;
 }
-.task{
-    font-weight: bold;
-    font-size: 17px;
-   
+.task {
+  font-weight: bold;
+  font-size: 17px;
 }
 
-.box{
-    height: 30px;
-    width: 30px;
-    border: 3px solid grey;
-    border-radius: 50%;
-    margin-bottom: 8px;
-    margin-right: 12px;
+.box {
+  height: 30px;
+  width: 30px;
+  border: 3px solid grey;
+  border-radius: 50%;
+  margin-bottom: 8px;
+  margin-right: 12px;
 }
 
-.box:hover{
-    border-color: #66B386;
-    cursor: pointer;
-
+.box:hover {
+  border-color: #66b386;
+  cursor: pointer;
 }
 
-.check{
-    color: #66B386;
-    position: absolute;
-    cursor: pointer;
-    position: absolute;
-    top: 0;   
-    left: -3px;
+.check {
+  color: #66b386;
+  position: absolute;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: -3px;
 }
 
-.task-time-w-controls{
-    display: flex;
-    margin-top: 15px;
-    justify-content: space-between;
-    align-items: center;
-   
+.task-time-w-controls {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-between;
+  align-items: center;
 }
-.task-time p{
-    margin-right: 30px;
+.task-time p {
+  margin-right: 30px;
 }
-.task-time> p> span{
-    font-style: italic;
- 
+.task-time > p > span {
+  font-style: italic;
 }
 
 i {
-    color: grey;
-    cursor: pointer;
-    margin-left: 8px;
-    width: 18px;
+  color: grey;
+  cursor: pointer;
+  margin-left: 8px;
+  width: 18px;
 }
 
-i:hover{
-    color:rgb(65, 65, 65);
-    
+i:hover {
+  color: rgb(65, 65, 65);
 }
 
-.controls{
-    display: flex;
-    align-items: center;
-    margin-top: -15px;
+.controls {
+  display: flex;
+  align-items: center;
+  margin-top: -15px;
 }
 
+@media screen and (max-width: 490px) {
+  .task-time p {
+    margin-left: 30px;
+    font-size: 10px;
+  }
+  .task {
+    font-size: 13px;
+  }
+  .task-date,
+  .task-time-w-controls {
+    font-size: 12px;
+  }
 
-
-
-
-@media screen and (max-width:490px) {
-    .task-time p{
-        margin-left: 30px;
-        font-size: 10px;
-    }
-    .task{
-        font-size: 13px;
-    }
-    .task-date,.task-time-w-controls{
-        font-size: 12px;
-    }
-
-    .controls{
-        align-items: left;
-        margin-left: -10px;
-        margin-right: 15px;
-    }
-    .check {
-        left: -5px;
-    }
+  .controls {
+    align-items: left;
+    margin-left: -10px;
+    margin-right: 15px;
+  }
+  .check {
+    left: -5px;
+  }
 }

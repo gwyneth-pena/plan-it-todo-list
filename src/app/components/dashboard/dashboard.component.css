@@ -1,172 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-
 .dashboard-container {
-     display: flex;
-     flex-direction: column;
-     flex-direction: column;
-     padding-top: 100px;
-     margin-bottom: 100px;
- }
-.dashboard-container form{
-     font-family: 'Mulish',sans-serif;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+  padding-top: 100px;
+  margin-bottom: 100px;
 }
-mat-accordion{
-    display: none;
+.dashboard-container form {
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
-hr{
-    background-color: #66B386;
+mat-accordion {
+  display: none;
 }
-.picker-container{
-   position: relative;
-   
+hr {
+  background-color: #66b386;
 }
-.picker,.picker2{
-    position: absolute;
-    right: 0;
-    bottom: -6px;
+.picker-container {
+  position: relative;
 }
-input,textarea{
-    font-size: 14px;
-    margin-right: 7px;
-    border:1px solid #66B386;
-    padding: 5px;
-    border-radius: 5px;
+.picker,
+.picker2 {
+  position: absolute;
+  right: 0;
+  bottom: -6px;
+}
+input,
+textarea {
+  font-size: 14px;
+  margin-right: 7px;
+  border: 1px solid #66b386;
+  padding: 5px;
+  border-radius: 5px;
 }
 ::ng-deep .mat-calendar-body-selected {
-    background-color: #66B386 !important;
+  background-color: #66b386 !important;
 }
-::ng-deep.mat-icon-button >span>svg {
-    color:  #66B386 !important;
+::ng-deep.mat-icon-button > span > svg {
+  color: #66b386 !important;
 }
-::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
-    background-color: #66B386 !important;
-
+::ng-deep
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  background-color: #66b386 !important;
 }
-::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
-     border-color: #66B386 !important;;
-}
-
-::ng-deep .timepicker__header{
-    background-color: #66B386 !important;
-}
-
-::ng-deep .timepicker-button >span{
-    color: #66B386;
+::ng-deep
+  .mat-calendar-body-today:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  border-color: #66b386 !important;
 }
 
-::ng-deep .clock-face__number> span .active{
-    background-color: #66B386;
+::ng-deep .timepicker__header {
+  background-color: #66b386 !important;
 }
 
-input:focus,textarea:focus{
-    outline: none;
-    border:3px solid #66B386;
-}
-button{
-    font-size: 15px;
-    padding: 5px;
-    background-color: #66B386;
-    margin: 7px 0;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-button:hover{
-    background-color: #7bc59a;
-
+::ng-deep .timepicker-button > span {
+  color: #66b386;
 }
 
-.welcome-user{
-    font-family: 'Mulish',sans-serif;
-    color: #66B386;
-    font-size: 24px;
-    margin: 10px 0;
-    text-align: center;
+::ng-deep .clock-face__number > span .active {
+  background-color: #66b386;
 }
 
-
-
-
-
-
-
-
-@media screen and (min-width:1600px){
-    .dashboard-container{
-        padding-top: 150px;}
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 3px solid #66b386;
+}
+button {
+  font-size: 15px;
+  padding: 5px;
+  background-color: #66b386;
+  margin: 7px 0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #7bc59a;
 }
 
-
-@media screen and (min-width:3000px){
-    .dashboard-container{
-        padding-top: 250px;}
+.welcome-user {
+  font-family: "Mulish", sans-serif;
+  color: #66b386;
+  font-size: 24px;
+  margin: 30px;
+  text-align: center;
+  font-weight: bold;
 }
 
-
-@media screen and (max-width:1026px )and (min-height:1366px) {
-    .dashboard-container{
-    padding-top: 150px;}
+@media screen and (min-width: 1600px) {
+  .dashboard-container {
+    padding-top: 150px;
+  }
 }
 
-
-@media screen and (max-width:925px) {
-    input,textarea{
-        width: 150px;
-    }
-    .dashboard-container{
-        padding-top: 0px;
-    }
+@media screen and (min-width: 3000px) {
+  .dashboard-container {
+    padding-top: 250px;
+  }
 }
 
-@media screen and (max-width:768px){
-   
-    mat-accordion{
-        display: block;
-        margin-top: 70px;
-    }
-   
-    mat-panel-title{
-        color: #66B386;
-    }
-    ::ng-deep .mat-expansion-panel-body  form{
-        margin-top: 10px;
-        flex-direction: column;
-       
-    }
-    .dashboard-container>form{
-        display: none;
-    }
-    ::ng-deep .mat-expansion-panel-body {
-        margin-top: 0px;
-    }
-
-
-    input,textarea{
-        margin: 2px 0;
-        width: 80%;
-    }
-    button{
-        width: 80%;
-    }
-    .picker-container{
-        width: 80%;
-    }
-
-    .picker-container input{
-        width: 100%;
-    }
-    .welcome-user{
-        font-size: 20px;
-        margin-bottom: 0px;
-    }
-    
+@media screen and (max-width: 1026px) and (min-height: 1366px) {
+  .dashboard-container {
+    padding-top: 150px;
+  }
 }
 
+@media screen and (max-width: 925px) {
+  input,
+  textarea {
+    width: 150px;
+  }
+  .dashboard-container {
+    padding-top: 0px;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  mat-accordion {
+    display: block;
+    margin-top: 70px;
+  }
 
+  mat-panel-title {
+    color: #66b386;
+  }
+  ::ng-deep .mat-expansion-panel-body form {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+  .dashboard-container > form {
+    display: none;
+  }
+  ::ng-deep .mat-expansion-panel-body {
+    margin-top: 0px;
+  }
+
+  input,
+  textarea {
+    margin: 2px 0;
+    width: 80%;
+  }
+  button {
+    width: 80%;
+  }
+  .picker-container {
+    width: 80%;
+  }
+
+  .picker-container input {
+    width: 100%;
+  }
+  .welcome-user {
+    font-size: 20px;
+    margin-bottom: 0px;
+  }
+}

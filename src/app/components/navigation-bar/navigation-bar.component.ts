@@ -5,20 +5,15 @@ import { AuthenticateService } from 'src/app/services/authenticate.service';
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.css']
+  styleUrls: ['./navigation-bar.component.css'],
 })
 export class NavigationBarComponent implements OnInit {
+  constructor(public router: Router, public authService: AuthenticateService) {}
 
-  constructor(public router:Router, public authService: AuthenticateService) { }
-   
-  ngOnInit(): void {
-         
+  ngOnInit(): void {}
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/']);
   }
-
-  logout(){
-     localStorage.removeItem('token');
-     this.router.navigate(['/']);
-  }
-
-
 }

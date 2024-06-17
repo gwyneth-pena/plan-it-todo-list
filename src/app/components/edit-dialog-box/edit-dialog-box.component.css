@@ -1,87 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-
-
-
-form{
-    
-    font-family: 'Mulish',sans-serif;
-    display: flex;
-    flex-direction: column;
+form {
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-hr{
-    background-color: #66B386;
+hr {
+  background-color: #66b386;
 }
-.picker-container{
-   position: relative;
-   width: 100%;
-
+.picker-container {
+  position: relative;
+  width: 100%;
 }
-.edit-heading{
-    font-weight: bold;
-    font-size: 17px;
+.edit-heading {
+  font-weight: bold;
+  font-size: 17px;
 }
-.picker{
-    position: absolute;
-    right: 0;
-    bottom: -2px;
+.picker {
+  position: absolute;
+  right: 0;
+  bottom: -2px;
 }
-input,textarea{
-    font-size: 14px;
-    margin: 5px 0;
-    border:1px solid #66B386;
-    padding: 5px;
-    width: 100%;
-    border-radius: 5px;
+input,
+textarea {
+  font-size: 14px;
+  margin: 5px 0;
+  border: 1px solid #66b386;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
-input:focus,textarea:focus{
-    outline: none;
-    border:3px solid #66B386;
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 3px solid #66b386;
 }
-button,.cancel-btn{
-    font-size: 15px;
-    padding: 5px;
-    margin-top: 3px;
-    background-color: #66B386;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+button,
+.cancel-btn {
+  font-size: 15px;
+  padding: 5px;
+  margin-top: 3px;
+  background-color: #66b386;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
-button:hover,.cancel-btn{
-    background-color: #7bc59a;
-
+button:hover,
+.cancel-btn {
+  background-color: #7bc59a;
 }
-.cancel-btn{
-    background: white !important;
-    color:#66B386 !important ;
-    border: 1px solid #66B386 !important;
+.cancel-btn {
+  background: white !important;
+  color: #66b386 !important ;
+  border: 1px solid #66b386 !important;
 }
 ::ng-deep .mat-calendar-body-selected {
-    background-color: #66B386 !important;
+  background-color: #66b386 !important;
 }
-::ng-deep.mat-icon-button >span>svg {
-    color:  #66B386 !important;
+::ng-deep.mat-icon-button > span > svg {
+  color: #66b386 !important;
 }
-::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
-    background-color: #66B386 !important;
-
+::ng-deep
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover
+  > .mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  background-color: #66b386 !important;
 }
-::ng-deep .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
-     border-color: #66B386 !important;;
+::ng-deep
+  .mat-calendar-body-today:not(.mat-calendar-body-selected):not(
+    .mat-calendar-body-comparison-identical
+  ) {
+  border-color: #66b386 !important;
 }
-::ng-deep .timepicker-overlay{
-    z-index: 1000 !important;
-}
-
-::ng-deep .timepicker__header{
-    background-color: #66B386 !important;
-}
-
-::ng-deep .timepicker-button >span{
-    color: #66B386;
+::ng-deep .timepicker-overlay {
+  z-index: 1000 !important;
 }
 
-::ng-deep .clock-face__number> span .active{
-    background-color: #66B386;
+::ng-deep .timepicker__header {
+  background-color: #66b386 !important;
+}
+
+::ng-deep .timepicker-button > span {
+  color: #66b386;
+}
+
+::ng-deep .clock-face__number > span .active {
+  background-color: #66b386;
 }
